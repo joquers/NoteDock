@@ -1,8 +1,8 @@
 {
-  "uuid": "quicknote@joquers.github.io",
-  "name": "QuickNote",
-  "description": "A tiny, private note in the GNOME Shell top panel.",
+  "uuid": "notedock@joquers.github.io",
+  "name": "NoteDock",
+  "description": "A lightweight scratchpad in the GNOME Shell top panel.",
   "shell-version": ["50"],
-  "url": "https://github.com/joquers/QuickNote",
-  "version-name": "0.1.0"
+  "url": "https://github.com/joquers/NoteDock",
+  "version-name": "1.0.0"
 }
