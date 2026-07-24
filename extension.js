@@ -213,7 +213,7 @@ export default class NoteDockExtension extends Extension {
 
             console.error(`NoteDock: failed to load note: ${error.message}`);
             this._statusLabel.set_text('Could not load note');
-            this._statusLabel.add_style_class_name('quicknote-status-error');
+            this._statusLabel.add_style_class_name('notedock-status-error');
         } finally {
             this._loading = false;
             this._updateUi();
