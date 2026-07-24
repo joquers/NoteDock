@@ -15,7 +15,7 @@ import {MAX_NOTE_LENGTH, NoteStore} from './noteStore.js';
 
 const SAVE_DELAY_MS = 500;
 
-export default class QuickNoteExtension extends Extension {
+export default class NoteDockExtension extends Extension {
     enable() {
         this._destroyed = false;
         this._saveSourceId = 0;
@@ -74,7 +74,7 @@ export default class QuickNoteExtension extends Extension {
 
         this._noteDot = new St.Label({
             text: '•',
-            style_class: 'quicknote-panel-dot',
+            style_class: 'notedock-panel-dot',
             y_align: Clutter.ActorAlign.CENTER,
             visible: false,
         });
@@ -95,25 +95,25 @@ export default class QuickNoteExtension extends Extension {
 
         const root = new St.BoxLayout({
             vertical: true,
-            style_class: 'quicknote-root',
+            style_class: 'notedock-root',
         });
         menuItem.add_child(root);
 
         const header = new St.BoxLayout({
-            style_class: 'quicknote-header',
+            style_class: 'notedock-header',
             x_expand: true,
         });
 
         header.add_child(new St.Label({
-            text: 'QuickNote',
-            style_class: 'quicknote-title',
+            text: 'NoteDock',
+            style_class: 'notedock-title',
             x_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         }));
 
         this._countLabel = new St.Label({
             text: `0 / ${MAX_NOTE_LENGTH}`,
-            style_class: 'quicknote-count',
+            style_class: 'notedock-count',
             y_align: Clutter.ActorAlign.CENTER,
         });
         header.add_child(this._countLabel);
@@ -121,7 +121,7 @@ export default class QuickNoteExtension extends Extension {
 
         this._editor = new St.Entry({
             hint_text: 'Write a quick note…',
-            style_class: 'quicknote-editor',
+            style_class: 'notedock-editor',
             can_focus: true,
             track_hover: true,
             x_expand: true,
@@ -139,13 +139,13 @@ export default class QuickNoteExtension extends Extension {
         root.add_child(this._editor);
 
         const footer = new St.BoxLayout({
-            style_class: 'quicknote-footer',
+            style_class: 'notedock-footer',
             x_expand: true,
         });
 
         this._statusLabel = new St.Label({
             text: 'Loading…',
-            style_class: 'quicknote-status',
+            style_class: 'notedock-status',
             x_expand: true,
             y_align: Clutter.ActorAlign.CENTER,
         });
@@ -171,7 +171,7 @@ export default class QuickNoteExtension extends Extension {
 
     _createButton(label, iconName, callback) {
         const button = new St.Button({
-            style_class: 'quicknote-button',
+            style_class: 'notedock-button',
             can_focus: true,
             reactive: true,
             track_hover: true,
@@ -179,7 +179,7 @@ export default class QuickNoteExtension extends Extension {
         });
 
         const content = new St.BoxLayout({
-            style_class: 'quicknote-button-content',
+            style_class: 'notedock-button-content',
         });
         content.add_child(new St.Icon({
             icon_name: iconName,
@@ -211,7 +211,7 @@ export default class QuickNoteExtension extends Extension {
                 return;
             }
 
-            console.error(`QuickNote: failed to load note: ${error.message}`);
+            console.error(`NoteDock: failed to load note: ${error.message}`);
             this._statusLabel.set_text('Could not load note');
             this._statusLabel.add_style_class_name('quicknote-status-error');
         } finally {
@@ -226,7 +226,7 @@ export default class QuickNoteExtension extends Extension {
         if (this._loading || this._destroyed)
             return;
 
-        this._statusLabel.remove_style_class_name('quicknote-status-error');
+        this._statusLabel.remove_style_class_name('notedock-status-error');
         this._statusLabel.set_text('Unsaved changes');
         this._scheduleSave();
     }
@@ -264,7 +264,7 @@ export default class QuickNoteExtension extends Extension {
                     return;
 
                 this._statusLabel.remove_style_class_name(
-                    'quicknote-status-error'
+                    'notedock-status-error'
                 );
                 this._statusLabel.set_text(
                     note ? 'Saved locally' : 'Empty note'
@@ -278,11 +278,11 @@ export default class QuickNoteExtension extends Extension {
                 }
 
                 console.error(
-                    `QuickNote: failed to save note: ${error.message}`
+                    `NoteDock: failed to save note: ${error.message}`
                 );
                 this._statusLabel.set_text('Could not save note');
                 this._statusLabel.add_style_class_name(
-                    'quicknote-status-error'
+                    'notedock-status-error'
                 );
             }
         });
