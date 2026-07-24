@@ -1,32 +1,32 @@
 /* SPDX-License-Identifier: GPL-3.0-or-later */
 
-.quicknote-panel-dot {
+.notedock-panel-dot {
     font-size: 15px;
     margin-left: 2px;
     color: -st-accent-color;
 }
 
-.quicknote-root {
+.notedock-root {
     width: 430px;
     padding: 14px;
     spacing: 12px;
 }
 
-.quicknote-header {
+.notedock-header {
     spacing: 10px;
 }
 
-.quicknote-title {
+.notedock-title {
     font-size: 1.15em;
     font-weight: 700;
 }
 
-.quicknote-count,
-.quicknote-status {
+.notedock-count,
+.notedock-status {
     color: rgba(255, 255, 255, 0.62);
 }
 
-.quicknote-editor {
+.notedock-editor {
     min-height: 180px;
     padding: 12px;
     border-radius: 10px;
@@ -36,34 +36,34 @@
     selected-color: -st-accent-fg-color;
 }
 
-.quicknote-editor:focus {
+.notedock-editor:focus {
     border-color: -st-accent-color;
     box-shadow: inset 0 0 0 1px -st-accent-color;
 }
 
-.quicknote-footer {
+.notedock-footer {
     spacing: 8px;
 }
 
-.quicknote-button {
+.notedock-button {
     padding: 7px 10px;
     border-radius: 8px;
     background-color: rgba(255, 255, 255, 0.09);
 }
 
-.quicknote-button:hover,
-.quicknote-button:focus {
+.notedock-button:hover,
+.notedock-button:focus {
     background-color: rgba(255, 255, 255, 0.16);
 }
 
-.quicknote-button:active {
+.notedock-button:active {
     background-color: rgba(255, 255, 255, 0.22);
 }
 
-.quicknote-button-content {
+.notedock-button-content {
     spacing: 6px;
 }
 
-.quicknote-status-error {
+.notedock-status-error {
     color: #ff7b8b;
 }
