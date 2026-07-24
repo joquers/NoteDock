@@ -1,5 +1,7 @@
 # NoteDock
 
+![TaskDock task manager screenshot](assets/notedock.png)
+
 NoteDock is a lightweight GNOME Shell extension that keeps one private,multiline note directly in the top panel.
 
 ## Features
