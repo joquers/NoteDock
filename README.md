@@ -39,11 +39,11 @@ journalctl -f -o cat /usr/bin/gnome-shell
 
 ## Future Features
 
-· Optional keyboard shortcut
-· Confirm before clearing
-· Configurable panel position
-· Optional Markdown preview
-· Export/import
+· Optional keyboard shortcut  
+· Confirm before clearing  
+· Configurable panel position  
+· Optional Markdown preview  
+· Export/import  
 
 ## Support NoteDock
 
