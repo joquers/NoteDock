@@ -54,7 +54,7 @@ export class NoteStore {
 
     async save(note, cancellable = null) {
         if (typeof note !== 'string')
-            throw new TypeError('QuickNote content must be a string');
+            throw new TypeError('NoteDock content must be a string');
 
         const result = GLib.mkdir_with_parents(this._directoryPath, 0o700);
         if (result !== 0)
