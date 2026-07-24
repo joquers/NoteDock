@@ -21,7 +21,7 @@ export class NoteStore {
     constructor() {
         this._directoryPath = GLib.build_filenamev([
             GLib.get_user_data_dir(),
-            'quicknote',
+            'notedock',
         ]);
 
         this._file = Gio.File.new_for_path(GLib.build_filenamev([
