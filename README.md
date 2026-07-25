@@ -66,4 +66,4 @@ bc1qmwgj2v7q3jzdtyfskqttephcdszc4qffluu42m
 
 ## License
 
-Copyright © 2026 Oswaldo J. Silva. NoteDock is licensed under GPL-3.0-or-later. See LICENSE
+Copyright © 2026 Oswaldo J. Silva. NoteDock is licensed under GPL-3.0-or-later. See [LICENSE](LICENSE) 
