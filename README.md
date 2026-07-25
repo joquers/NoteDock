@@ -17,7 +17,16 @@ NoteDock is a lightweight GNOME Shell extension that keeps one private,multiline
 
 The note is stored locally at:  
 
-~/.local/share/notedock/note.txt  
+~/.local/share/notedock/note.txt
+
+## Clipboard access
+
+NoteDock accesses the system clipboard only after explicit user action:
+
+- **Paste** reads text from the clipboard and inserts it into the note.
+- **Copy** writes the current note to the clipboard.
+
+NoteDock does not monitor clipboard changes, store clipboard history, or transmit clipboard contents to any external service.
 
 ## Requirements  
 
