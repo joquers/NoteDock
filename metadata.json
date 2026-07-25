@@ -1,7 +1,7 @@
 {
   "uuid": "notedock@joquers.github.io",
   "name": "NoteDock",
-  "description": "A lightweight scratchpad in the GNOME Shell top panel. Notes are stored locally. NoteDock writes note text to the clipboard only when the user clicks Copy.",
+  "description": "A lightweight scratchpad in the GNOME Shell top panel. Notes are stored locally. NoteDock reads clipboard text only when the user clicks Paste and writes note text to the clipboard only when the user clicks Copy.",
   "shell-version": ["50"],
   "url": "https://github.com/joquers/NoteDock",
   "version-name": "1.0.1"
