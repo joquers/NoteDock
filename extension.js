@@ -158,6 +158,13 @@ export default class NoteDockExtension extends Extension {
         );
         footer.add_child(copyButton);
 
+        const pasteButton = this._createButton(
+            'Paste',
+            'edit-paste-symbolic',
+            () => this._pasteNote()
+        );
+        footer.add_child(pasteButton);
+
         const clearButton = this._createButton(
             'Clear',
             'edit-clear-all-symbolic',
