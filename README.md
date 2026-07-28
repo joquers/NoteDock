@@ -36,18 +36,23 @@ Only Shell versions that have been tested should be added to metadata.json
 
 Install for development
 
-chmod +x install.sh  
-./install.sh  
-gnome-extensions enable notedock@joquers.github.io  
+  ```bash
+  chmod +x install.sh  
+  ./install.sh  
+  gnome-extensions enable notedock@joquers.github.io  
+  ```
 
 On GNOME 50, use a nested development session:
 
-dbus-run-session gnome-shell --devkit --wayland
+  ```bash
+  dbus-run-session gnome-shell --devkit --wayland
+  ```
 
 View Shell errors with:
 
-journalctl -f -o cat /usr/bin/gnome-shell
-
+  ```bash
+  journalctl -f -o cat /usr/bin/gnome-shell
+  ```
 ## Future Features
 
 · Optional keyboard shortcut  
